@@ -1,0 +1,117 @@
+body {
+    font-family: Georgia, Times, serif;
+    font-size: 16px;
+    word-spacing: 3px;
+}
+
+/* nav bar left */
+.navbar_left {
+    overflow: hidden;
+    background-color: white;
+    position: absolute;
+    top: 4%;
+    right: calc(50% + 140px); /* relative position to the center */
+    display: block;
+    margin-bottom: 10px;
+    word-spacing: 15px;
+}
+.navbar_left a {
+    font-size: 25px;
+    text-decoration: none;
+    color: #000;
+}
+/* nav bar right */
+.navbar_right {
+    overflow: hidden;
+    background-color: white;
+    position: absolute;
+    top: 4%;
+    left: calc(50% + 400px); /* relative postion to the center */
+    display: block;
+    margin-bottom: 10px;
+}
+.navbar_right a {
+    font-size: 25px;
+    text-decoration: none;
+    color: #000;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* line under the navigation bar*/
+hr {
+    margin-top: 80px;
+    width: 960px;
+}
+
+/* searchBox */
+.searchBox {
+    margin: 30px auto 30px auto;
+    width: 940px;
+    height: 350px;
+    padding: 10px;
+    background-image: url(../image/city.jpg);
+    background-position: center;
+    text-align: center;
+}
+.searchForm {
+    margin: 150px;
+}
+input[type=text] {
+    width: 80%;
+    padding: 10px 20px;
+    margin: 10px;
+    display: inline-block;
+    border: 1px solid #f1f1f1;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.searchForm #searchSubmit { /* submit button */
+    background-color: #ffffff;
+    border: 1px solid #f1f1f1;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0;
+    font-size: 16px;
+    padding: 8px;
+    text-transform: uppercase;
+    width: 50px;
+}
+
+p {
+    text-align: center;
+}
+h1 {
+    text-align: center;
+    border-top: 2px solid #cccccc;
+    border-bottom: 2px solid #cccccc;
+    padding: 20px;
+}
+/*specifications for the slides in recommendation section*/
+.slides {
+    margin: 30px auto;
+    width: 960px;
+    padding: 10px;
+}
+.mySlides {
+    width: 960px;
+}
+
+#toTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99; /* Make sure it does not overlap */
+    background-color: dimgrey;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 30px;
+}
+
+#toTopBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}

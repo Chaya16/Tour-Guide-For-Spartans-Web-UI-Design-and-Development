@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- make the website work on all the device and screen resolution -->
+    <meta name="viewport" content="width = device-width, initial-scale=1">
+    <title>Tour Guide for Spartans</title>
+    <link href="css/homepage.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<header id="header">
+    <!-- left part of navigation bar -->
+    <div class="navbar_left">
+        <a href="homepage.html">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#maps">Maps</a>
+    </div>
+    <!-- right part of navigation bar -->
+    <div class="navbar_right">
+        <a href="login.html">Login</a>
+    </div>
+</header>
+
+    <hr>
+    <!-- search bar -->
+    <div class="searchBox">
+        <form class="searchForm">
+            <input type="text" placeholder="Looking for something...?"
+                   size="30" required>
+            <input type="submit" value="go" id="searchSubmit">
+        </form>
+        <!-- <img src="image/city.jpg" id="mainimg"> -->
+    </div>
+
+    <!-- slide show for recommended destinations -->
+    <div class="slides" id="slideshow">
+        <h1> Recommendations </h1>
+        <img class="mySlides" src="image/homeslide1.jpg">
+        <img class="mySlides" src="image/homeslide2.jpg">
+        <img class="mySlides" src="image/homeslide3.jpg">
+    </div>
+    <script src="js/homepage.js" type="text/javascript"></script>
+
+    <!-- button scroll the page to the top -->
+    <button onclick="topFunction()" id="toTopBtn" title="Go to top">&#8796; </button>
+    <script src="js/homepage.js" type="text/javascript"></script>
+
+    <p>Presented by Team 404 &copy</p>
+</footer>
+</body>
+</html>

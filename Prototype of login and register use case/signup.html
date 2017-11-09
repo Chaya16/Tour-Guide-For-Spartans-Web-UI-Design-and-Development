@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale=1">
+    <title>Tour Guide for Spartans</title>
+    <link href="css/login.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+</head>
+<body>
+<header>
+    <!-- navigation bar -->
+    <div class="navbar_left">
+        <a href="homepage.html">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#maps">Maps</a>
+    </div>
+    <div class="navbar_right">
+        <a href="login.html">Login</a>
+    </div>
+</header>
+
+    <hr>
+    <div class="imgcontainer">
+        <img src="image/qIXtA.png" alt="Logo" class="logo"
+             width="60" height="60">
+    </div>
+
+    <div class="container">
+        <!-- sending the username and password in POST request to the address specified in FORM action for sign-up -->
+        <form action="http://localhost:3000/process_post" method="POST">
+        <p>Username</p>
+        <input type="text" placeholder="Enter username.." name="userName" size="50">
+        <p>Password</p>
+        <input type="password" placeholder="Enter password.." name="passWord" size="50">
+        <button id="signupBtn" type="submit">Sign up</button>
+        </form>
+    </div>
+</body>
+</html>
