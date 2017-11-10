@@ -1,0 +1,191 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description', content='')
+        meta(name='author', content='')
+        link(rel='icon', href='../../favicon.ico')
+        title Tour Guide for Spartans
+        // Bootstrap core CSS
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css', integrity='sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ', crossorigin='anonymous')
+        // jQuery ui CSS
+        link(rel='stylesheet', href='//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css')
+        script(src='https://code.jquery.com/jquery-1.12.4.js')
+        script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
+        // Custom CSS
+        link(href='css/homepage.css', rel='stylesheet')
+        // Autocomplete funciton
+        script.
+            $( function() {
+                var availableTags = [
+                    "San Diego",
+                    "Los Angeles",
+                    "San Francisco",
+                    "Seattle",
+                    "San Jose",
+                    "Santa Barbara"
+                ];
+                $( "#tags" ).autocomplete({
+                    source: availableTags
+                });
+            } );
+            $( function() {
+                $( "#datepicker" ).datepicker({
+                    minDate : 0
+                });
+            } );
+    body
+        nav.navbar.navbar-toggleable-md.navbar-light.fixed-top.bg-faded
+            button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarCollapse', aria-controls='navbarCollapse', aria-expanded='false', aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+            a.navbar-brand(href='#')
+                img.img-fluid(src='image/qIXtA.png', height='30px', width='30px')
+            #navbarCollapse.collapse.navbar-collapse
+                ul.navbar-nav.mr-auto
+                    li.nav-item.active
+                        a.nav-link(href='homepage.html') Home
+                    li.nav-item
+                        a.nav-link(href='#') About
+                    li.nav-item
+                        a.nav-link(href='#') Contact
+                    li.nav-item
+                        a.nav-link(href='maps.html') Map
+                    li.nav-item
+                        a.nav-link(href='bucketlist.html') BucketList
+                form.form-inline.mt-2.mt-md-0
+                    .ui-widget
+                        input#tags.form-control.mr-sm-2(type='text', placeholder='Search')
+                        button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
+                //
+                  <form class="form-inline mt-2 mt-md-0 ui-widget">
+                  <input class="form-control mr-sm-2" id="tags" type="text" placeholder="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+                ul.navbar-nav.justify-content-end
+                    li.nav-item
+                    if user
+                        a.nav-link(href='/home') Hello, #{user.firstName}!
+                    else
+                        a.nav-link(href='/login') Join Us
+        #myCarousel.carousel.slide(data-ride='carousel')
+            ol.carousel-indicators
+                li.active(data-target='#myCarousel', data-slide-to='0')
+                li(data-target='#myCarousel', data-slide-to='1')
+                li(data-target='#myCarousel', data-slide-to='2')
+            .carousel-inner(role='listbox')
+                .carousel-item.active
+                    img.first-slide(src='image/homeslide1.jpg', alt='First slide')
+                    .container
+                        .carousel-caption.d-none.d-md-block.text-left
+                            h1 Golden Gate Bridge
+                            p
+                                | The Golden Gate Bridge is a suspension bridge spanning the Golden Gate,
+                                | the one-mile-wide (1.6 km) strait connecting San Francisco Bay and
+                                | the Pacific Ocean.
+                            p
+                                a.btn.btn-lg.btn-primary(href='/display', role='button') Details
+                .carousel-item
+                    img.second-slide(src='image/homeslide2.jpg', alt='Second slide')
+                    .container
+                        .carousel-caption.d-none.d-md-block
+                            h1 Space Needle
+                            p
+                                | The Space Needle is an observation tower in Seattle, Washington,
+                                | a landmark of the Pacific Northwest, and an icon of Seattle.
+                            p
+                                a.btn.btn-lg.btn-primary(href='#', role='button') Explore Seattle
+                .carousel-item
+                    img.third-slide(src='image/homeslide4.jpg', alt='Third slide')
+                    .container
+                        .carousel-caption.d-none.d-md-block.text-right
+                            h1 Sunset in San Diego
+                            p
+                                i Sunset is still my favorite color, and rainbow is second.
+                            p
+                                i by Mattie Stepanek
+                            p
+                                a.btn.btn-lg.btn-primary(href='place.html', role='button') Plan your tour
+            a.carousel-control-prev(href='#myCarousel', role='button', data-slide='prev')
+                span.carousel-control-prev-icon(aria-hidden='true')
+                span.sr-only Previous
+            a.carousel-control-next(href='#myCarousel', role='button', data-slide='next')
+                span.carousel-control-next-icon(aria-hidden='true')
+                span.sr-only Next
+        // Card component
+        .row
+            .col-sm-4
+                .card
+                    img.card-img-top(src='image/disney-logo.jpg', alt='Card image cap', width='100%', height='200')
+                    .card-block
+                        h4.card-title Disneyland
+                        p.card-text
+                            | To all who come to this happy place: Welcome. Disneyland is your land. Here age relives fond memories
+                            | of the past, and here youth may savor the challenge and promise of the future. Disneyland is dedicated
+                            | to the ideals, the dreams, and the hard facts that have created America, with the hope that it will be
+                            | a source of joy and inspiration to all the world.
+                        p.card-text — Walter E. Disney, July 17, 1955
+                        a.btn.btn-primary(href='#') Details
+            .col-sm-4
+                .card
+                    img.card-img-top(src='image/griffith-logo.jpg', alt='Card image cap', width='100%', height='200')
+                    .card-block
+                        h4.card-title Griffith Observatory
+                        p.card-text
+                            | The observatory is a popular tourist attraction with an excellent view of the Hollywood Sign and
+                            | an extensive array of space and science-related displays. Admission has been free since the
+                            | observatory's opening in 1935, in accordance with the will of Griffith J. Griffith, the benefactor
+                            | after whom the observatory is named.
+                        a.btn.btn-primary(href='#') Details
+            .col-sm-4
+                .card
+                    img.card-img-top(src='image/alcatraz-logo.jpg', alt='Card image cap', width='100%', height='200')
+                    .card-block
+                        h4.card-title Alcatraz
+                        p.card-text
+                            | Today, the island's facilities are managed by the National Park Service as part of the Golden Gate
+                            | National Recreation Area; it is open to tours. Visitors can reach the island by ferry ride from Pier 33,
+                            | near Fisherman's Wharf, San Francisco. Hornblower Cruises and Events, operating under the
+                            | name Alcatraz Cruises, is the official ferry provider to and from the island.
+                        a.btn.btn-primary(href='#') Details
+        hr.featurette-divider
+        .row.featurette
+            .col-md-8
+                h2.featurette-heading This is some features:
+                p
+                    | Sorry, we are still working on this part, you will see exciting info here very soon:
+            .col-md-4
+                img.featurette-image.img-fluid.mx-auto(src='', alt='placeholder image')
+        hr.featurette-divider
+        .row.featurette
+            .col-md-8.push-md-4
+                h2.featurette-heading
+                    | Feature two
+                    span.text-muted See for yourself.
+                p.lead Some random stuff.
+            .col-md-4.pull-md-8
+                img.featurette-image.img-fluid.mx-auto(src='', alt='placeholder image')
+        hr.featurette-divider
+        .row.featurette
+            .col-md-8
+                h2.featurette-heading
+                    | Last feature
+                    span.text-muted Something.
+                p.lead Just some random stuff.
+            .col-md-4
+                img.featurette-image.img-fluid.mx-auto(src='', alt='placeholder image')
+        hr.featurette-divider
+        footer
+            p.float-right
+                a(href='#') Back to top
+            p
+                | © 2017 Team, 404. ·
+                a(href='#') Privacy
+                |  ·
+                a(href='#') Terms
+        // Bootstrap JavaScript
+        script(src='https://code.jquery.com/jquery-3.1.1.slim.min.js', integrity='sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n', crossorigin='anonymous')
+        script(src='https://code.jquery.com/jquery-3.2.1.js', integrity='sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=', crossorigin='anonymous')
+        script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js', integrity='sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb', crossorigin='anonymous')
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js', integrity='sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn', crossorigin='anonymous')
