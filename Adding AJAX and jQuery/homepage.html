@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Tour Guide for Spartans</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+          crossorigin="anonymous">
+
+    <!-- jQuery ui CSS-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- Custom CSS -->
+    <link href="css/homepage.css" rel="stylesheet">
+
+    <!--  Autocomplete funciton  -->
+    <script>
+        $( function() {
+            var availableTags = [
+                "San Diego",
+                "Los Angeles",
+                "San Francisco",
+                "Seattle",
+                "San Jose",
+                "Santa Barbara"
+            ];
+            $( "#tags" ).autocomplete({
+                source: availableTags
+            });
+        } );
+        $( function() {
+            $( "#datepicker" ).datepicker({
+                minDate : 0
+            });
+        } );
+
+    </script>
+</head>
+<body>
+
+<nav class="navbar navbar-toggleable-md navbar-light fixed-top bg-faded">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+            aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">
+        <img src="image/qIXtA.png" class="img-fluid" height="30px" width="30px">
+    </a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="homepage.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="maps.html">Map</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="bucketlist.html">BucketList</a>
+            </li>
+        </ul>
+        <form class="form-inline mt-2 mt-md-0">
+            <div class="ui-widget">
+            <input class="form-control mr-sm-2" id="tags" type="text" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </div></form>
+        <!--
+                <form class="form-inline mt-2 mt-md-0 ui-widget">
+            <input class="form-control mr-sm-2" id="tags" type="text" placeholder="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        -->
+        <ul class="navbar-nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link" href="login.html">Join us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+            <img class="first-slide"
+                 src="image/homeslide1.jpg" alt="First slide">
+            <div class="container">
+                <div class="carousel-caption d-none d-md-block text-left">
+                    <h1>Golden Gate Bridge</h1>
+                    <p>The Golden Gate Bridge is a suspension bridge spanning the Golden Gate,
+                        the one-mile-wide (1.6 km) strait connecting San Francisco Bay and
+                        the Pacific Ocean.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Details</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="second-slide"
+                 src="image/homeslide2.jpg" alt="Second slide">
+            <div class="container">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Space Needle</h1>
+                    <p>The Space Needle is an observation tower in Seattle, Washington,
+                        a landmark of the Pacific Northwest, and an icon of Seattle.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Explore Seattle</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="third-slide"
+                 src="image/homeslide4.jpg" alt="Third slide">
+            <div class="container">
+                <div class="carousel-caption d-none d-md-block text-right">
+                    <h1>Sunset in San Diego</h1>
+                    <p><i>Sunset is still my favorite color, and rainbow is second.</i></p>
+                    <p><i>by Mattie Stepanek</i></p>
+                    <p><a class="btn btn-lg btn-primary" href="place.html" role="button">Plan your tour</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+    <!-- Card component -->
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card">
+                <img class="card-img-top" src="image/disney-logo.jpg" alt="Card image cap" width="100%" height="200">
+                <div class="card-block">
+                    <h4 class="card-title">Disneyland</h4>
+                    <p class="card-text">
+                        To all who come to this happy place: Welcome. Disneyland is your land. Here age relives fond memories
+                        of the past, and here youth may savor the challenge and promise of the future. Disneyland is dedicated
+                        to the ideals, the dreams, and the hard facts that have created America, with the hope that it will be
+                        a source of joy and inspiration to all the world.
+                    </p>
+                    <p class="card-text">— Walter E. Disney, July 17, 1955</p>
+                    <a href="#" class="btn btn-primary">Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="card">
+                <img class="card-img-top" src="image/griffith-logo.jpg" alt="Card image cap" width="100%" height="200">
+                <div class="card-block">
+                    <h4 class="card-title">Griffith Observatory</h4>
+                    <p class="card-text">
+                        The observatory is a popular tourist attraction with an excellent view of the Hollywood Sign and
+                        an extensive array of space and science-related displays. Admission has been free since the
+                        observatory's opening in 1935, in accordance with the will of Griffith J. Griffith, the benefactor
+                        after whom the observatory is named.
+                    </p>
+                    <a href="#" class="btn btn-primary">Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="card">
+                <img class="card-img-top" src="image/alcatraz-logo.jpg" alt="Card image cap" width="100%" height="200">
+                <div class="card-block">
+                    <h4 class="card-title">Alcatraz</h4>
+                    <p class="card-text">
+                        Today, the island's facilities are managed by the National Park Service as part of the Golden Gate
+                        National Recreation Area; it is open to tours. Visitors can reach the island by ferry ride from Pier 33,
+                        near Fisherman's Wharf, San Francisco. Hornblower Cruises and Events, operating under the
+                        name Alcatraz Cruises, is the official ferry provider to and from the island.
+                    </p>
+                    <a href="#" class="btn btn-primary">Details</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-8">
+            <h2 class="featurette-heading">This is some features:</h2>
+            <p>Sorry, we are still working on this part, you will see exciting info here very soon:</p>
+        </div>
+        <div class="col-md-4">
+            <img class="featurette-image img-fluid mx-auto" src=""
+                 alt="placeholder image">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-8 push-md-4">
+            <h2 class="featurette-heading">Feature two
+                <span class="text-muted">See for yourself.</span></h2>
+            <p class="lead">Some random stuff.</p>
+        </div>
+        <div class="col-md-4 pull-md-8">
+            <img class="featurette-image img-fluid mx-auto" src=""
+                 alt="placeholder image">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-8">
+            <h2 class="featurette-heading">Last feature <span class="text-muted">Something.</span></h2>
+            <p class="lead">Just some random stuff.</p>
+        </div>
+        <div class="col-md-4">
+            <img class="featurette-image img-fluid mx-auto" src=""
+                 alt="placeholder image">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+
+    <footer>
+        <p class="float-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2017 Team, 404. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </footer>
+
+</div>
+
+
+<!-- Bootstrap JavaScript -->
+
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+        integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+<script
+        src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>

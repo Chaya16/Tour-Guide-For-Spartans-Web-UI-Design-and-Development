@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Sortable - Connect lists</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <link href="css/bucketlist.css" rel="stylesheet" type="text/css" />
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  <script>
+      $( function() {
+        $( "#list1, #list2" ).sortable({
+          connectWith: ".connectedSortable"
+        }).disableSelection();
+      } );
+  </script>  
+</head>
+<body>
+ 
+
+<h1>Create your Bucket List</h1>
+<h2>The list on the left is some of for your trip planning in US west coast</h2>
+<h5>(Drag items from list in left, to list in right to create your very own bucket list)</h5>
+
+<ul id="list1" class="connectedSortable">
+  <li class="ui-state-default">San Francisco</li>
+  <li class="ui-state-default">San Diego</li>
+  <li class="ui-state-default">Los Angeles</li>
+  <li class="ui-state-default">Lake Tahoe</li>
+  <li class="ui-state-default">Sacramento</li>
+  <li class="ui-state-default">Napa Valley</li>
+  <li class="ui-state-default">Santa Barbara</li>
+  <li class="ui-state-default">Yosemite Valley</li>
+  <li class="ui-state-default">Sausolito</li>
+  <li class="ui-state-default">Berkeley</li>
+</ul>
+ 
+<ul id="list2" class="connectedSortable">
+  
+</ul>
+ 
+ 
+</body>
+</html>

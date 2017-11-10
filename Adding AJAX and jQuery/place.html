@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tour in San Diego</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+          crossorigin="anonymous">
+    <!-- jQuery CSS -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- Custom CSS -->
+    <link href="css/place.css" rel="stylesheet">
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( "#tabs" ).tabs({
+                beforeLoad: function( event, ui ) {
+                    ui.jqXHR.fail(function() {
+                        ui.panel.html(
+                            "Couldn't load this tab. We'll try to fix this as soon as possible. " +
+                            "If this wouldn't be a demo." );
+                    });
+                }
+            });
+        } );
+    </script>
+</head>
+<body>
+
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="homepage.html">
+        <img src="image/qIXtA.png" class="img-fluid" height="30px" width="30px">
+    </a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="homepage.html">Home<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div id="tabs">
+    <img src="image/sd-logo.jpg" width="920px" height="500px">
+    <ul>
+        <li><a href="SD_intro.html">Intro</a></li>
+        <li><a href="SD_food.html">Food</a></li>
+        <li><a href="SD_tour.html">Tour </a></li>
+    </ul>
+</div>
+
+</body>
+</html>

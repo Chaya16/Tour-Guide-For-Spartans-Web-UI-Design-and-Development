@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale=1">
+    <title>Tour Guide for Spartans</title>
+
+    <link href="css/login.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+            integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+            integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>    -->
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+        $( document ).tooltip();
+      } );
+    </script>
+</head>
+<body>
+
+    <hr>
+    <div class="imgcontainer">
+        <a href="homepage.html"><img src="image/qIXtA.png" alt="Logo" class="logo"
+                                               width="60" height="60"></a>
+    </div>
+
+    <!-- login and sign up form-->
+    <div class="containerForm">
+        <!-- sending the username and password in POST request to the address specified in FORM action for login-->
+        <form action="http://localhost:3000/login_post" method="POST">
+        <p>Username</p>
+        <input type="text" placeholder="Enter username.." name="userName" size="50">
+        <p>Password</p>
+        <input id="pwd" title="Password must be 5-12 characters, letters and digits only" type="password"
+               placeholder="Enter password.." name="passWord" size="50">
+        <button id="loginBtn" type="submit">Login</button>
+        <p>New user? <a href="signup.html" id="promptSignup">Sign up</a> </p>
+        </form>
+    </div>
+    <hr>
+
+</body>
+</html>
